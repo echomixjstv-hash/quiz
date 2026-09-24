@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz Game</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.48),
+            rgba(0,0,0,0.68)
+        ),
+        url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=90")
+        center center / cover no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    gap:45px;
+}
+
+.title{
+    color:white;
+    font-size:clamp(35px,5vw,85px);
+    font-weight:900;
+    letter-spacing:6px;
+    text-align:center;
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,0.9);
+}
+
+.subtitle{
+    color:#eee;
+    font-size:clamp(16px,1.5vw,25px);
+    margin-top:-25px;
+    text-align:center;
+    text-shadow:0 2px 8px #000;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:row;
+    gap:40px;
+    justify-content:center;
+    align-items:center;
+}
+
+.btn{
+    width:clamp(230px,22vw,400px);
+    height:clamp(100px,11vw,190px);
+
+    border:none;
+    border-radius:25px;
+
+    color:white;
+    font-size:clamp(25px,3vw,55px);
+    font-weight:900;
+    letter-spacing:3px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.45),
+        inset 0 2px 2px rgba(255,255,255,0.25);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.host{
+    background:linear-gradient(135deg,#e53935,#9b0000);
+}
+
+.player{
+    background:linear-gradient(135deg,#1976d2,#003c8f);
+}
+
+.btn:hover{
+    transform:translateY(-6px) scale(1.03);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.6),
+        inset 0 2px 2px rgba(255,255,255,0.3);
+}
+
+.btn:active{
+    transform:scale(0.97);
+}
+
+@media(max-aspect-ratio:1/1){
+    .buttons{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .btn{
+        width:65vw;
+        height:18vw;
+        min-height:90px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<div class="title">
+    QUIZ GAME
+</div>
+
+<div class="subtitle">
+    Choose your mode
+</div>
+
+<div class="buttons">
+
+    <button class="btn host" onclick="openHost()">
+        HOST
+    </button>
+
+    <button class="btn player" onclick="openPlayer()">
+        PLAYER
+    </button>
+
+</div>
+```
+
+</div>
+
+<script>
+
+function openHost(){
+    window.location.href =
+        "https://echomixjstv-hash.github.io/quizhost/";
+}
+
+function openPlayer(){
+    window.location.href =
+        "https://echomixjstv-hash.github.io/controller/";
+}
+
+</script>
+
+</body>
+</html>
