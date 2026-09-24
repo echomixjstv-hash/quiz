@@ -28,7 +28,7 @@ body{
             rgba(0,0,0,0.48),
             rgba(0,0,0,0.68)
         ),
-        url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=90")
+        url("photo.png")
         center center / cover no-repeat;
 
     display:flex;
@@ -64,13 +64,16 @@ body{
     font-size:clamp(16px,1.5vw,25px);
     margin-top:-25px;
     text-align:center;
-    text-shadow:0 2px 8px #000;
+
+    text-shadow:
+        0 2px 8px #000;
 }
 
 .buttons{
     display:flex;
     flex-direction:row;
     gap:40px;
+
     justify-content:center;
     align-items:center;
 }
@@ -83,6 +86,7 @@ body{
     border-radius:25px;
 
     color:white;
+
     font-size:clamp(25px,3vw,55px);
     font-weight:900;
     letter-spacing:3px;
@@ -99,11 +103,19 @@ body{
 }
 
 .host{
-    background:linear-gradient(135deg,#e53935,#9b0000);
+    background:linear-gradient(
+        135deg,
+        #e53935,
+        #9b0000
+    );
 }
 
 .player{
-    background:linear-gradient(135deg,#1976d2,#003c8f);
+    background:linear-gradient(
+        135deg,
+        #1976d2,
+        #003c8f
+    );
 }
 
 .btn:hover{
@@ -119,6 +131,7 @@ body{
 }
 
 @media(max-aspect-ratio:1/1){
+
     .buttons{
         flex-direction:column;
         gap:20px;
@@ -149,11 +162,15 @@ body{
 
 <div class="buttons">
 
-    <button class="btn host" onclick="openHost()">
+    <button
+        class="btn host"
+        onclick="openHost()">
         HOST
     </button>
 
-    <button class="btn player" onclick="openPlayer()">
+    <button
+        class="btn player"
+        onclick="openPlayer()">
         PLAYER
     </button>
 
